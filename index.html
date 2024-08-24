@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="area" id="are">
+        <p style="font-size: 170%;" id="1">آزمون سرعت عملکرد</p>
+        <p class="2" id="2">هر زمان که رنگ پس زمینه از قرمز به سبز تغییر کرد کلیک کنید
+        <p class="2">هر زمان آماده بودید برای شروع کلیک کنید</p>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+
+
+
+    const color1 = document.getElementById("are");
+        
+    document.getElementById("are").addEventListener("click", timer);    
+        function timer(){
+            red();
+            // document.getElementById("are").addEventListener("click", red);
+            
+            
+            // $(".area").click(red);
+            
+            // var randomTime = Math.floor(Math.random() * 3000) + 1000;
+            
+
+            function red(){
+                // flag = true;
+                color1.innerText = "!آماده صفحه سبز باشید";
+                color1.className = 'area red';
+                $(".2").hide();
+                tee=setTimeout(green,5000);
+            }
+            function green(){
+                color1.innerText = "!کلیک کنید";
+                color1.className = 'area green';
+                $(".2").hide();
+                // time();
+                timeee = setInterval(time,10);
+                // setTimeout(blue,5000);
+                document.getElementById("are").addEventListener("click", blue);
+            }
+
+            function blue(){
+                color1.innerText = timer + ' ms';
+                color1.className = 'area';
+                $(".2").hide();
+                // stop();
+                clearInterval(tee);
+                document.getElementById("are").addEventListener("click", red);
+            }
+            
+            
+            // timeee = setInterval(time,10);
+        }
+        var timer = 0;
+            function time(){
+                timer ++; 
+        }
+        function stop(){
+            clearInterval(timeee);
+        }
+    // });
+
+
+
+    </script>
+</body>
+</html>

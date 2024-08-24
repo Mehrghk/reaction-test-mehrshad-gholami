@@ -1,0 +1,23 @@
+.area{
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    background-color: #2B87D1;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.green{
+    background-color: #4BDB6A;
+}
+.red{
+    background-color: #CE2636;
+}
